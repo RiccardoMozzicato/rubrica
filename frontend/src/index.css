@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/schibsted-grotesk';
+
+@theme {
+  --font-sans: 'Schibsted Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --color-carta: #f6f7f9;
+  --color-inchiostro: #1b2340;
+  --color-linea: #dadfe7;
+  --color-tenue: #5a6378;
+  --color-linguetta: #f2c14e;
+  --color-pericolo: #b93a2b;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-carta);
+    color: var(--color-inchiostro);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-linguetta);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto !important;
+    }
+  }
+}
