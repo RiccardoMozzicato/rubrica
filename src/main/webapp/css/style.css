@@ -1,0 +1,14 @@
+body { font-family: system-ui, sans-serif; margin: 2rem; color: #222; }
+table { border-collapse: collapse; margin-top: 1rem; min-width: 600px; }
+th, td { border: 1px solid #ccc; padding: .5rem .75rem; text-align: left; }
+th { background: #f3f4f6; }
+td form { margin: 0; }
+.btn { display: inline-block; padding: .4rem .9rem; border: 0; border-radius: 4px;
+       background: #2563eb; color: #fff; text-decoration: none; font: inherit; cursor: pointer; }
+.btn-danger { background: #dc2626; }
+.btn-secondary { background: #6b7280; }
+.field { display: flex; flex-direction: column; margin-bottom: .75rem; max-width: 360px; }
+.field label { font-weight: 600; margin-bottom: .25rem; }
+.field input { padding: .4rem; border: 1px solid #ccc; border-radius: 4px; }
+.error { color: #dc2626; font-size: .875rem; }
+.actions { display: flex; gap: .5rem; margin-top: 1rem; }

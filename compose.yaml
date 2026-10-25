@@ -1,0 +1,16 @@
+# MySQL locale per sviluppo: docker compose up -d
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
+      MYSQL_DATABASE: rubrica
+      MYSQL_USER: rubrica
+      MYSQL_PASSWORD: rubrica
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./schema_database.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - rubrica-data:/var/lib/mysql
+volumes:
+  rubrica-data:
