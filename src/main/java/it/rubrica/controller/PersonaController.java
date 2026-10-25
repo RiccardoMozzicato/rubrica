@@ -25,11 +25,6 @@ public class PersonaController {
         this.personaService = personaService;
     }
 
-    @GetMapping("/")
-    public String home() {
-        return REDIRECT_LISTA;
-    }
-
     @GetMapping("/lista")
     public String lista(Model model) {
         model.addAttribute("persone", personaService.elencaTutte());
