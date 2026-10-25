@@ -11,11 +11,12 @@ export default defineConfig({
   base: `${CONTEXT_PATH}/app/`,
   plugins: [react(), tailwindcss()],
   define: {
-    __API_URL__: JSON.stringify(`${CONTEXT_PATH}/api`),
+    __CONTEXT_PATH__: JSON.stringify(CONTEXT_PATH),
   },
   server: {
     proxy: {
-      [`${CONTEXT_PATH}/api`]: BACKEND_URL,
+      // Tutto ciò che sta sotto il context path ma fuori da /app (API e pagine JSP) va al backend
+      [`^${CONTEXT_PATH}/(?!app(/|$))`]: BACKEND_URL,
     },
   },
   test: {

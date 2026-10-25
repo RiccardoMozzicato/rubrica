@@ -10,7 +10,10 @@
 <body>
 <h1>Rubrica</h1>
 
-<a class="btn" href="${pageContext.request.contextPath}/editor">NUOVO</a>
+<div class="toolbar">
+    <a class="btn" href="${pageContext.request.contextPath}/editor">NUOVO</a>
+    <a class="link" href="${pageContext.request.contextPath}/app/">Versione React</a>
+</div>
 
 <table>
     <thead>

@@ -2,6 +2,8 @@ import { Link, Route, Routes } from 'react-router'
 import { EditorContatto } from './contatti/EditorContatto'
 import { ListaContatti } from './contatti/ListaContatti'
 
+export const URL_LISTA_JSP = `${__CONTEXT_PATH__}/lista`
+
 export function App() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-16 sm:px-8">
@@ -9,6 +11,10 @@ export function App() {
         <Link to="/" className="rounded-sm">
           <h1 className="text-5xl leading-none font-extrabold tracking-tight sm:text-7xl">Rubrica</h1>
         </Link>
+        {/* Pagina JSP servita dal backend, fuori dal router React */}
+        <a href={URL_LISTA_JSP} className="pb-1 text-sm font-semibold text-tenue underline-offset-4 hover:underline">
+          Versione JSP
+        </a>
       </header>
 
       <Routes>

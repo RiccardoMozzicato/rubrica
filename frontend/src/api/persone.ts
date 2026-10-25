@@ -24,7 +24,7 @@ export class ApiError extends Error {
   }
 }
 
-const API_URL = `${__API_URL__}/persone`
+const API_URL = `${__CONTEXT_PATH__}/api/persone`
 
 const NETWORK_ERROR_MESSAGE = 'Impossibile contattare il server. Controlla che il backend sia avviato.'
 

@@ -12,3 +12,5 @@ td form { margin: 0; }
 .field input { padding: .4rem; border: 1px solid #ccc; border-radius: 4px; }
 .error { color: #dc2626; font-size: .875rem; }
 .actions { display: flex; gap: .5rem; margin-top: 1rem; }
+.toolbar { display: flex; align-items: center; justify-content: space-between; max-width: 900px; }
+.link { color: #2563eb; font-weight: 600; }
